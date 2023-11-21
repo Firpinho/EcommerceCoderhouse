@@ -5,29 +5,27 @@ import { ItemList } from "./ItemList";
 
 export const ItemListContainer = (props) => {
   const [items, setItems] = useState([]);
-  const { category } = useParams();
+  const { category_filter } = useParams();
 
   useEffect(() => {
     const promise = new Promise((resolve, reject) => {
-      setTimeout(() => resolve(data), 2000);
+      setTimeout(() => resolve(data), 500);
     });
 
     promise.then((response) => {
-      if (!category) setItems(response);
+      if (!category_filter) setItems(response);
       else {
-        const filter = response.filter((item) => item.category === category);
-        setItems(filter)
+        const filter = response.filter((item) => item.category === category_filter);
+        setItems(filter);
       }
-    }, []);
-  });
+    });
+  }, [category_filter]);
 
   return (
-    <div className="main_title">
-      <div className="content">
-        <h1>{props.greeting}</h1>
-        <div className="list">
-          <ItemList items={items}></ItemList>
-        </div>
+    <div className="list_container">
+      <h2>{props.category}</h2>
+      <div className="list">
+        <ItemList items={items}></ItemList>
       </div>
     </div>
   );

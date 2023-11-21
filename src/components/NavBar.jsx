@@ -28,7 +28,7 @@ export const NavBar = () => {
     <header>
       <nav>
         <div className="main_content">
-          <p className="title" onClick={clicky}>Loot?Hub</p>
+          <p className="brand" onClick={clicky}>Loot?Hub</p>
           <div className="options">
             {options.map((option) => (
               <div className="item" key={option.text}>

@@ -1,0 +1,80 @@
+.default_card {
+    *{
+        margin: 0;
+    }
+    width: 250px;
+    background: map-get($map: $default-card, $key: card-bg);
+    color: map-get($map: $default-card, $key: card-color);
+    border-color: map-get($map: $default-card, $key: img-side-border);
+    border-style: solid;
+    border-radius: 5px;
+    position: relative;
+    perspective: 1000px;
+    
+
+    .card__title {
+        text-align: center;
+        font-size: 25px;
+        padding: 10px 15px;
+    }
+    .card__owner {
+        display: flex;
+        padding:25px 10px;
+        gap: 10px;
+        p {
+            font-weight: bold;
+            align-self: flex-start;
+            margin: 0;
+        }
+        img {
+            width: 60px;
+            border-radius: 50%;
+        }
+    }
+    .card__description {
+        height: 80px;
+        width: 90%;
+        padding: 0 10px;
+        white-space: wrap;
+        overflow: hidden;
+        text-overflow: ellipsis ;
+    }
+    .card__price{
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px 20px;
+        text-align: end;
+    }
+    .card__buttons{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 5px;
+    }
+
+    .info__side {
+        transform: rotateY(180deg);
+        backface-visibility: hidden !important;
+    }
+
+    .images__side {
+        display: flex;
+        overflow: hidden;
+        position: absolute;
+        justify-content: center;
+        img {
+            width: 250px;
+            height: 354px;
+            object-fit:cover;
+        }
+        backface-visibility: hidden !important;
+    }
+
+    transform-style: preserve-3d;
+    transition: all 0.15s linear;
+}
+
+.active {
+    border-color: map-get($map: $default-card, $key: card-border) !important;
+    transform: rotateY(180deg);
+}

@@ -1,0 +1,29 @@
+$main-theme : (
+    brand: #f2be22,
+    esp-brand-drop-shadow: drop-shadow(0 0 0.75rem #d97d0d),
+    titles: #f2be22,
+    borders: #f2a81d,
+    header: #26231c,
+    footer: #26231c,
+    body: #3c3c3c,
+    drop-shadow: drop-shadow(0 0 0.75rem #f2be22),
+);
+
+$button: (
+    button-bg: #26231c,
+    button-border: #f2a81d,
+    button-color: #f2be22
+);
+
+$default-card: (
+    card-bg: linear-gradient(180deg, #353535 0%, #917113 100%),
+    card-border: #d68227,
+    img-side-border: #f2be22,
+    card-color: ghostwhite,
+    card-button-bg: #3c3c3c,
+    card-button-border: #f2be22,
+    card-button-color: #f2be22,
+    card-info-button-bg: #f2be22,
+    card-info-button-border: #f2a81d,
+);
+

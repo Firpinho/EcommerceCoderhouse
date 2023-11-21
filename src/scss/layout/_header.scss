@@ -1,0 +1,14 @@
+header {
+    background-color: map-get($map: $main-theme ,$key: header);
+    nav {
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div {
+            display: flex;
+            align-self: center;
+            gap: 15px;
+        }
+    }
+}

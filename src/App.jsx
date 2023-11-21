@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { NavBar } from "./components/NavBar"
-import { ItemListContainer } from "./components/ItemListContainer"
-import './App.css'
+import { Categorias } from "./components/Categorias"
+import { ItemDetailContainer } from "./components/ItemDetailContainer"
+import { LandingContainer } from "./components/LandingContainer"
+import './styles/App.css'
 import { Error404 } from "./components/Error404"
 
 
@@ -10,10 +12,11 @@ export default function App() {
         <BrowserRouter>
             <NavBar/>
             <Routes>
-                <Route path="/" element={<h1>Bienvenido/a a Loot?Hub</h1>}></Route>
+                <Route path="/" element={<LandingContainer></LandingContainer>}></Route>
                 <Route path="/destacado" element={<h1>Destacado</h1>}/>
-                <Route path="/categorias" element={<ItemListContainer greeting="Categorias"/>}/>
-                <Route path="/categorias/:category" element={<ItemListContainer greeting="Categorias"/>}/>
+                <Route path="/categorias" element={<Categorias/>}/>
+                <Route path="/categorias/:category_filter" element={<Categorias search='category'/>}/>
+                <Route path="/lootbox/:box_id" element={<ItemDetailContainer/>}/>
                 <Route path="/cajasDeAutor" element={<h1>Cajas de autor</h1>}/>
                 <Route path="*" element={<Error404/>}/>
             </Routes>

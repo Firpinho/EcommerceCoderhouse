@@ -1,0 +1,203 @@
+@import url(https://fonts.googleapis.com/css?family=Russo+One:regular);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+html {
+  font-family: Roboto;
+}
+html .brand {
+  font-family: "Russo One";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #3c3c3c;
+}
+
+.brand {
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #f2be22;
+  filter: drop-shadow(0 0 0.75rem #d97d0d);
+}
+
+a {
+  display: flex;
+  height: 50px;
+  width: 200px;
+  gap: 10px;
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #26231c;
+  border-style: solid;
+  border-color: #f2a81d;
+  border-radius: 5px;
+  color: #f2be22;
+  text-decoration: none;
+  cursor: pointer;
+}
+a img {
+  width: 30px;
+}
+
+.info__button {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #f2be22;
+  border-color: #f2a81d;
+}
+.info__button img {
+  width: 8px !important;
+  border-radius: 0 !important;
+}
+
+.default_card {
+  width: 250px;
+  background: linear-gradient(180deg, #353535 0%, #917113 100%);
+  color: ghostwhite;
+  border-color: #f2be22;
+  border-style: solid;
+  border-radius: 5px;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: all 0.15s linear;
+}
+.default_card * {
+  margin: 0;
+}
+.default_card .card__title {
+  text-align: center;
+  font-size: 25px;
+  padding: 10px 15px;
+}
+.default_card .card__owner {
+  display: flex;
+  padding: 25px 10px;
+  gap: 10px;
+}
+.default_card .card__owner p {
+  font-weight: bold;
+  align-self: flex-start;
+  margin: 0;
+}
+.default_card .card__owner img {
+  width: 60px;
+  border-radius: 50%;
+}
+.default_card .card__description {
+  height: 80px;
+  width: 90%;
+  padding: 0 10px;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.default_card .card__price {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: end;
+}
+.default_card .card__buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px;
+}
+.default_card .info__side {
+  transform: rotateY(180deg);
+  backface-visibility: hidden !important;
+}
+.default_card .images__side {
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  justify-content: center;
+  backface-visibility: hidden !important;
+}
+.default_card .images__side img {
+  width: 250px;
+  height: 354px;
+  object-fit: cover;
+}
+
+.active {
+  border-color: #d68227 !important;
+  transform: rotateY(180deg);
+}
+
+.cart {
+  position: relative;
+  padding: 25px 20px;
+}
+.cart img {
+  width: 30px;
+}
+.cart span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.categories__box {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+.categories__box a {
+  background-color: transparent;
+  border-style: none;
+}
+
+.list_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.list_container h2 {
+  font-size: 35px;
+  color: #f2be22;
+  width: 80%;
+  align-self: center;
+}
+.list_container .list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  gap: 1rem;
+  justify-content: start;
+  align-self: center;
+}
+
+header {
+  background-color: #26231c;
+}
+header nav {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav div {
+  display: flex;
+  align-self: center;
+  gap: 15px;
+}
+
+/*# sourceMappingURL=App.css.map */
