@@ -1,5 +1,8 @@
 header {
+    position:sticky;
+    top: 0;
     background-color: map-get($map: $main-theme ,$key: header);
+    z-index: 200;
     nav {
         padding: 0 20px;
         display: flex;
@@ -9,6 +12,9 @@ header {
             display: flex;
             align-self: center;
             gap: 15px;
+        }
+        .options {
+            padding-left: 20px;
         }
     }
 }

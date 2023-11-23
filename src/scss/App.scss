@@ -1,11 +1,27 @@
+/*
+    UTILS
+*/
 @import './utils/variables';
 @import './utils/globals';
+/*
+    COMPONENTS
+*/
 @import './components/brand';
 @import './components/buttons';
 @import './components/card';
-@import './components/subtitle';
 @import './components/cart-widget';
 @import './components/categories-box';
 @import './components/list-container';
+@import './components/loading-screen';
+@import './components/item-detail';
+@import './components/newsletter';
+@import './components/welcome';
+@import './components/line';
+/*
+    LAYOUT
+*/
 @import './layout/header';
+/*
+    VIEWS
+*/
 @import './views/landing';

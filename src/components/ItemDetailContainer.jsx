@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { LoadingScreen } from "./LoadingScreen";
 
 
 import { data } from "../data/items";
@@ -13,7 +14,7 @@ export const ItemDetailContainer = () => {
 
   useEffect(() => {
     const promise = new Promise((resolve, reject) => {
-      setTimeout(() => resolve(data), 500);
+      setTimeout(() => resolve(data), 1000);
     });
 
     promise.then((response) => {
@@ -25,8 +26,8 @@ export const ItemDetailContainer = () => {
 
 
   return (
-    <>
-      {item ? <ItemDetail item={item}/> : <>Loading...</>}
-    </>
+    <div className="item_detail__container">
+      {item ? <ItemDetail item={item}/> : <LoadingScreen section="LootBox"/>}
+    </div>
   )
 };

@@ -19,7 +19,7 @@ export const Item = (props) => {
             </div>
             <div className="info__side">
                 <div className="card__title">
-                    <h3>{props.item.title}</h3>
+                    <p>{props.item.title}</p>
                 </div>
                 <div className="card__body">
                     <div className="card__owner">

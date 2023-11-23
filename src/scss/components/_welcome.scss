@@ -1,0 +1,78 @@
+.welcome__board {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  gap: 15rem;
+  background-image: map-get($map: $welcome, $key: bg-image);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 550px;
+
+  .main__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+  }
+
+  .heading {
+    color: map-get($map: $main-theme, $key: titles);
+    position: relative;
+    h1 {
+      font-size: 55px;
+      padding-top: 40px;
+      margin: 0;
+      span {
+        font-size: inherit;
+      }
+    }
+    h2 {
+      margin-top: -10px;
+    }
+  }
+  .explore {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 8rem;
+    .search__bar {
+      display: flex;
+      position: relative;
+      height: 100%;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translate(-5%, -50%);
+        height: 100%;
+        width: 25px;
+        z-index: 2;
+      }
+      input {
+        width: 30%;
+        padding: 0 70px;
+        background: transparent;
+        border-color: map-get($map: $main-theme, $key: borders);
+        border-radius: 50px;
+        border-width: 3px;
+        border-style: solid;
+        color: ghostwhite;
+        font-weight: bold;
+        font-size: large;
+
+        transition: filter .4s ease-in-out, width .4s ease-in-out;
+
+        &::placeholder {
+          color: ghostwhite;
+          font-weight: bold;
+          font-size: large;
+        }
+        &:focus {
+          width: 90%;
+          outline: none;
+          filter: map-get($map: $main-theme, $key: drop-shadow);
+          background-color: map-get($map: $button, $key: button-bg);
+        }
+      }
+    }
+  }
+}

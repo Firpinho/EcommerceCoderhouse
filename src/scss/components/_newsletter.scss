@@ -1,0 +1,53 @@
+.newsletter__container {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    border-style: solid;
+    border-color: black;
+    background: map-get($map: $welcome, $key: news-bg);
+    height: 500px;
+    max-height: 90%;
+    width: 400px;
+    align-self: center;
+    justify-items: center;
+    .title {
+        p {
+            font-family: 'Russo One';
+            color: map-get($map: $main-theme, $key: titles);
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+    .content {
+        justify-content: center;
+        color: ghostwhite;
+        width: 90%;
+        min-height: 100%;
+        overflow: auto;
+    }
+}
+
+.news {
+    margin: 10px 0;
+    border-style: solid;
+    border-color: map-get($map: $main-theme, $key: borders);
+    border-radius: 7px;
+    overflow: hidden;
+    .heading {
+        display: flex;
+        color: ghostwhite !important;
+        gap: 15px;
+        padding: 0 10px;
+        font-weight: bold;
+        .version {
+            color: map-get($map: $main-theme, $key: secondary);
+        }
+    }
+    .content {
+        margin: 0 auto;
+    }
+    .author {
+        padding-right: 10px;
+        float: right;
+    }
+}

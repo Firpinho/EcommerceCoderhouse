@@ -1,7 +1,13 @@
 .brand {
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    color: map-get($map: $main-theme, $key: brand);
-    filter: map-get($map: $main-theme, $key: esp-brand-drop-shadow)
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: map-get($map: $main-theme, $key: brand);
+  filter: map-get($map: $main-theme, $key: esp-brand-drop-shadow);
+
+  transition: filter 0.1s ease-in-out;
+
+  &:hover {
+    filter: map-get($map: $main-theme, $key: esp-brand-drop-shadow-hover);
+  }
 }

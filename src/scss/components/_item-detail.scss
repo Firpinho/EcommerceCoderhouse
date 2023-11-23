@@ -1,0 +1,93 @@
+.item_detail__container {
+    min-height: 500px;
+    padding-top: 3rem;
+    .item_info_container{
+        display: grid;
+        grid-template-columns: 50% auto;
+        .item_banner__slider{
+            display: flex;
+            justify-content: center;
+            img {
+                width: 600px;
+                height: 700px;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+
+        .item__info{
+            position: relative;
+            .title {
+                color: map-get($map: $main-theme, $key: titles);
+            }
+
+            h1 {
+                font-size: 45px;
+                padding-left: 30px;
+                color: map-get($map: $main-theme, $key: titles);
+            }
+            .owner{
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                padding: 30px 0;
+                p{
+                    color: ghostwhite;
+                    font-weight: bold;
+                    font-size: 25px;
+                    margin-top: 0;
+                }
+                img {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    filter: map-get($map: $main-theme, $key: drop-shadow);
+                }
+            }
+            .description {
+                padding: 10px 0;
+                .description__content {
+                    color: ghostwhite;
+                    margin-left: 2rem;
+                }
+            }
+            .prizes {
+                color: ghostwhite;
+                .prize {
+                    padding-left: 2rem;
+                    margin: 2px 0;
+                }
+                .legendary_prize {
+                    color: map-get($map: $prizes, $key: legendary-prize-color);
+                    filter: map-get($map: $prizes, $key: legendary-ds)
+                }
+                .epic_prize {
+                    color: map-get($map: $prizes, $key: epic-prize-color);
+                    filter: map-get($map: $prizes, $key: epic-ds)
+                }
+                .rare_prize {
+                    color: map-get($map: $prizes, $key: rare-prize-color);
+                    filter: map-get($map: $prizes, $key: rare-ds)
+                }
+                .common_prize {
+                    color: map-get($map: $prizes, $key: common-prize-color);
+                    filter: map-get($map: $prizes, $key: common-ds)
+                }
+            }
+
+            .bottom {
+                position: absolute;
+                bottom: 0;
+            }
+
+            .item__warnings {
+                color: orangered;
+                font-weight: bold;
+            }
+            .item__buttons {
+                display: flex;
+                gap: 20px;
+            }
+        }
+    }
+}

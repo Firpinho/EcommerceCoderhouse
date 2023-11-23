@@ -18,6 +18,12 @@ a {
     img{
         width: 30px;
     }
+
+    transition: filter .1s ease-in-out;
+
+    &:hover {
+        filter: map-get($map: $main-theme, $key: drop-shadow)
+    }
 }
 
 .info__button {
@@ -31,5 +37,13 @@ a {
     img {
         width: 8px !important;
         border-radius: 0 !important;
+    }
+}
+
+.buy_credit_card__button {
+    border-color: map-get($map: $buy-button, $key: button-border);
+    color: map-get($map: $buy-button, $key: button-color);
+    &:hover {
+        filter: map-get($map: $buy-button, $key: drop-shadow)
     }
 }

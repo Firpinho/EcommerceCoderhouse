@@ -1,10 +1,11 @@
 import { ItemListContainer } from "./ItemListContainer";
+import { WelcomeBoard } from "./WelcomeBoard";
 
 export const LandingContainer = () => {
   return (
     <>
-      <h1>Bienvenido/a a Loot?Hub</h1>
-      <ItemListContainer category="Cajas" />
+      <WelcomeBoard/>
+      <ItemListContainer category="Cajas destacadas" />
     </>
   );
 };

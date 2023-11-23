@@ -12,7 +12,7 @@ export default function App() {
         <BrowserRouter>
             <NavBar/>
             <Routes>
-                <Route path="/" element={<LandingContainer></LandingContainer>}></Route>
+                <Route path="/" element={<LandingContainer/>}></Route>
                 <Route path="/destacado" element={<h1>Destacado</h1>}/>
                 <Route path="/categorias" element={<Categorias/>}/>
                 <Route path="/categorias/:category_filter" element={<Categorias search='category'/>}/>

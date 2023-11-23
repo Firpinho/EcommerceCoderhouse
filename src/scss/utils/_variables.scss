@@ -1,19 +1,32 @@
 $main-theme : (
     brand: #f2be22,
-    esp-brand-drop-shadow: drop-shadow(0 0 0.75rem #d97d0d),
+    esp-brand-drop-shadow: drop-shadow(0 0 0.65rem #d97d0d),
+    esp-brand-drop-shadow-hover: drop-shadow(0 0 0.85rem #d97d0d),
     titles: #f2be22,
+    secondary: #d97d0d,
     borders: #f2a81d,
     header: #26231c,
     footer: #26231c,
     body: #3c3c3c,
-    drop-shadow: drop-shadow(0 0 0.75rem #f2be22),
+    drop-shadow: drop-shadow(0 0 0.35rem #f2be22),
 );
+
+
+
 
 $button: (
     button-bg: #26231c,
     button-border: #f2a81d,
     button-color: #f2be22
 );
+
+$buy-button: (
+    button-bg: #26231c,
+    button-border: #008a00,
+    button-color: #00FF00,
+    drop-shadow: drop-shadow(0 0 0.35rem #00FF00)
+);
+
 
 $default-card: (
     card-bg: linear-gradient(180deg, #353535 0%, #917113 100%),
@@ -27,3 +40,23 @@ $default-card: (
     card-info-button-border: #f2a81d,
 );
 
+$loading-screen: (
+    items: #f2be22,
+    icon-dropshadow: drop-shadow(0 0 0.75rem #f2be22)
+);
+
+$welcome: (
+    bg-image: (linear-gradient(180deg, #ffffff72 0%, #00000078 0%), url("welcome.png")),
+    news-bg: linear-gradient(180deg, #26231c 0%, #615947 74%)
+);
+
+$prizes: (
+    legendary-prize-color: #ffe600,
+    legendary-ds: drop-shadow(0 0 0.35rem #ffe600),
+    epic-prize-color: #bd009a,
+    epic-ds: drop-shadow(0 0 0.35rem #bd009a),
+    rare-prize-color: #cf7f00,
+    rare-ds: drop-shadow(0 0 0.35rem #cf7f00),
+    common-prize-color: #9c9c9c,
+    common-ds: drop-shadow(0 0 0.35rem #9c9c9c)
+)
