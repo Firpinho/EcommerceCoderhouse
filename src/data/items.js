@@ -52,41 +52,5 @@ export const data = [
         owner_pic: '/pfp.png',
         description: 'Esta es una caja muy interesante',
         price: 14.99
-    },
-    {
-        id: 7,
-        title: 'Titulo de caja 6',
-        category: 'Dispositivos',
-        owner: 'Nombre creador',
-        owner_pic: '/pfp.png',
-        description: 'Esta es una caja muy interesante',
-        price: 29.99
-    },
-    {
-        id: 8,
-        title: 'Titulo de caja 7',
-        category: 'Ropa',
-        owner: 'Nombre creador',
-        owner_pic: '/pfp.png',
-        description: 'Esta es una caja muy interesante',
-        price: 9.99
-    },
-    {
-        id: 9,
-        title: 'Titulo de caja 8',
-        category: 'Dispositivos',
-        owner: 'Nombre creador',
-        owner_pic: '/pfp.png',
-        description: 'Esta es una caja muy interesante',
-        price: 24.99
-    },
-    {
-        id: 10,
-        title: 'Titulo de caja 9',
-        category: 'Puntos',
-        owner: 'Nombre creador',
-        owner_pic: '/pfp.png',
-        description: 'Esta es una caja muy interesante',
-        price: 49.99
-    },
+    }
 ]
