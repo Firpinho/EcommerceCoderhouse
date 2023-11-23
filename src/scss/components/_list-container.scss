@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   h2 {
+    margin: 0px 0 25px 0;
     font-size: 35px;
     color: map-get($map: $main-theme, $key: titles);
     width: 80%;

@@ -67,7 +67,7 @@
           font-size: large;
         }
         &:focus {
-          width: 90%;
+          width: 300px;
           outline: none;
           filter: map-get($map: $main-theme, $key: drop-shadow);
           background-color: map-get($map: $button, $key: button-bg);

@@ -1,6 +1,7 @@
 /*
     UTILS
 */
+@import './utils/mixin';
 @import './utils/variables';
 @import './utils/globals';
 /*
@@ -16,7 +17,6 @@
 @import './components/item-detail';
 @import './components/newsletter';
 @import './components/welcome';
-@import './components/line';
 /*
     LAYOUT
 */

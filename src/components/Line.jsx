@@ -1,3 +1,3 @@
 export const Line = () => {
-    return <span className="line"></span>
+    return <hr className="line"></hr>
 }

@@ -13,3 +13,8 @@ body {
     margin: 0;
     background-color: map-get($map: $main-theme, $key: body);
 }
+
+
+.line {
+    @include line(50px);
+}

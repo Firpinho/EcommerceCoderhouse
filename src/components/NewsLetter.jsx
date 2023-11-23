@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { LoadingScreen } from "./LoadingScreen";
 import { NewsList } from "./NewsList";
+import { Line } from "./Line";
 
 const news_array = [
     {
@@ -41,6 +42,7 @@ export const NewsLetter = () => {
         <div className="newsletter__container">
             <div className="title">
                 <p>Noticias!</p>
+                <Line/>
             </div>
             <div className="content">
                     {news ? <NewsList items={news} />: <LoadingScreen section="default"/>}

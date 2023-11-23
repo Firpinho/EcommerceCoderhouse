@@ -1,0 +1,7 @@
+@mixin line($margin){
+    margin: $margin auto;
+    width: 80%;
+    min-height: 3px;
+    border: none;
+    background: linear-gradient(270deg, rgba(60,60,60,0.5998774509803921) 0%, rgba(242,190,34,1) 50%, rgba(60,60,60,0.6) 100%);
+}
