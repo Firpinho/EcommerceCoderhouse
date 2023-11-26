@@ -13,12 +13,12 @@ export const Item = (props) => {
         }
     }
     return (
-        <div className={active ? "default_card active" : "default_card"} onClick={turn}>
+        <div className={active ? "default_card card_active" : "default_card"} onClick={turn}>
             <div className="images__side">
                 <img src="/boximage.png" alt="" />
             </div>
             <div className="info__side">
-                <div className="card__title">
+                <div className="card__title" id='item_info'>
                     <p>{props.item.title}</p>
                 </div>
                 <div className="card__body">
@@ -34,8 +34,8 @@ export const Item = (props) => {
                     <p>${props.item.price}</p>
                 </div>
                 <div className="card__buttons">
-                    <Link className="info__button" to={`/lootbox/${props.item.id}`}><img src={info} alt="" /></Link>
-                    <a className="card__button"><img src={cartAdd} alt="" /></a>
+                    <Link className="button info__button" to={`/lootbox/${props.item.id}`}><img src={info} alt="Lootbox details" /></Link>
+                    <a className="button card__button"><img src={cartAdd} alt="" /></a>
                 </div>
             </div>
         </div>

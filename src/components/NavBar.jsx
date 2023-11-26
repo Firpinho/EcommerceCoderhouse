@@ -3,6 +3,7 @@ import destacado from "../assets/destacado.svg";
 import categorias from "../assets/categorias.svg";
 import autor from "../assets/autor.svg";
 import crear from "../assets/crear.svg";
+import { NavLink } from "react-router-dom";
 
 const options = [
   {
@@ -23,19 +24,20 @@ const options = [
 ];
 
 export const NavBar = () => {
-  const clicky = () => window.location = "/";
   return (
     <header>
       <nav>
         <div className="main_content">
-          <p className="brand" onClick={clicky}>Loot?Hub</p>
+          <NavLink className="nav_brand" to='/'>
+            <p>Loot?Hub</p>
+          </NavLink>
           <div className="options">
             {options.map((option) => (
               <div className="item" key={option.text}>
-                <a href={option.link}>
+                <NavLink className='button' to={option.link}>
                   <img src={option.icon} alt="Option icon" />
                   <p>{option.text}</p>
-                </a>
+                </NavLink>
               </div>
             ))}
           </div>
@@ -43,13 +45,13 @@ export const NavBar = () => {
         <div className="other_options">
           <CartWidget itemCount="3" />
           <div className="item__1">
-            <a href="">
+            <a className='button' href="">
               <img src={crear} alt="Crear caja" />
               <p>Crear Caja</p>
             </a>
           </div>
           <div className="item__2">
-            <a href="">
+            <a className="button" href="">
               <p>Login</p>
             </a>
           </div>

@@ -1,5 +1,6 @@
 import creditCardIcon from "../assets/tarjeta.svg";
 import pointsIcon from "../assets/puntos.svg";
+import { Link } from "react-router-dom";
 
 export const ItemDetail = (props) => {
   return (
@@ -19,29 +20,29 @@ export const ItemDetail = (props) => {
         </div>
         <div className="prizes">
           <p className="title">Premios:</p>
-          <p className="prizes__content">
-            <p className="prize legendary_prize">Premio legendario  1.54%</p>
+          <div className="prizes__content">
+            <p className="prize legendary_prize">Premio legendario 1.54%</p>
             <p className="prize epic_prize">Premio epico 3.34%</p>
             <p className="prize rare_prize">Primer premio raro 10.43%</p>
             <p className="prize rare_prize">Segundo premio raro 12.43%</p>
             <p className="prize common_prize">Primer premio comun 24.15%</p>
             <p className="prize common_prize">Segundo premio comun 25.89%</p>
             <p className="prize common_prize">Tercer premio comun 22.22%</p>
-          </p>
+          </div>
         </div>
         <div className="bottom">
           <div className="item__warnings">
             <p>¡Este objeto no es reembolsable!</p>
           </div>
           <div className="item__buttons">
-            <a href="">
+            <Link className="button" to="#">
               <img src={pointsIcon} alt="Buy with points" />
               <p>{Math.floor(props.item.price) * 100}</p>
-            </a>
-            <a href="" className="buy_credit_card__button">
+            </Link>
+            <Link to="#" className="button buy_credit_card__button">
               <img src={creditCardIcon} alt="Buy with credit card" />
               <p>{props.item.price}</p>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

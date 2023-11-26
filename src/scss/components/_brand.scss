@@ -1,13 +1,14 @@
-.brand {
+.nav_brand {
   font-size: 30px;
   font-weight: bold;
+  border: none;
+  background: none;
   cursor: pointer;
+  text-decoration: none;
   color: map-get($map: $main-theme, $key: brand);
+  transition: filter .4s ease-in-out;
+}
+
+.brand {
   filter: map-get($map: $main-theme, $key: esp-brand-drop-shadow);
-
-  transition: filter 0.1s ease-in-out;
-
-  &:hover {
-    filter: map-get($map: $main-theme, $key: esp-brand-drop-shadow-hover);
-  }
 }

@@ -2,6 +2,7 @@ import ropa from '../assets/ropa.svg';
 import dispositivos from '../assets/dispositivos.svg';
 import puntos from '../assets/puntos.svg';
 import todos from '../assets/compass.svg';
+import { Link } from 'react-router-dom';
 
 const catergories = [
     {
@@ -30,7 +31,7 @@ export const Categories = () => {
     return (
         <div className="categories__box">
             {
-                catergories.map((category) => <a href={category.link} key={category.link}><img src={category.icon} alt="" /><p>{category.category_name}</p></a>)
+                catergories.map((category) => <Link className='button' to={category.link} key={category.link}><img src={category.icon} alt="" /><p>{category.category_name}</p></Link>)
             }
         </div>
     )

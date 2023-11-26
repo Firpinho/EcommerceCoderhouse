@@ -3,8 +3,12 @@
 
 html {
     font-family: Roboto;
-    .brand, .title{
+    scroll-behavior: smooth;
+    .brand, .nav_brand, .title{
         font-family: 'Russo One';
+    }
+    * {
+        -webkit-user-drag: none;
     }
 }
 

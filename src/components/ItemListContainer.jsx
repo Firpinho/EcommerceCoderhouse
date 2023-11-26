@@ -9,6 +9,9 @@ export const ItemListContainer = (props) => {
   const { category_filter } = useParams();
 
   useEffect(() => {
+
+    setItems(null)
+
     const promise = new Promise((resolve, reject) => {
       setTimeout(() => resolve(data), 1000);
     });

@@ -18,3 +18,10 @@ header {
         }
     }
 }
+
+.active {
+    .title {
+        background-color: aquamarine;
+    }
+    filter: map-get($map: $main-theme, $key: esp-brand-drop-shadow);
+}

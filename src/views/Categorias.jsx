@@ -1,5 +1,5 @@
-import { Categories } from "./Categories"
-import { ItemListContainer } from "./ItemListContainer"
+import { Categories } from "../components/Categories"
+import { ItemListContainer } from "../components/ItemListContainer"
 import { useParams } from "react-router-dom";
 
 export const Categorias = (props) => {

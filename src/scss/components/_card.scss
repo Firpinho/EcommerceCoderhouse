@@ -74,7 +74,7 @@
     transition: all 0.15s linear;
 }
 
-.active {
+.card_active {
     border-color: map-get($map: $default-card, $key: card-border) !important;
     transform: rotateY(180deg);
 }

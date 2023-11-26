@@ -13,13 +13,19 @@ export const ItemDetailContainer = () => {
   const { box_id } = useParams();
 
   useEffect(() => {
+
+    setItem(null)
+    window.scrollTo(0, 0);
+
     const promise = new Promise((resolve, reject) => {
       setTimeout(() => resolve(data), 1000);
     });
 
     promise.then((response) => {
       const filter = response.find((item) => item.id === Number(box_id));
-      console.log(filter);
+      if (!filter) {
+       
+      }
       setItem(filter);
     });
   }, [box_id]);

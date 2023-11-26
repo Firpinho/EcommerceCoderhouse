@@ -1,6 +1,7 @@
 import compass_icon from "../assets/compass.svg";
 import { NewsLetter } from "./NewsLetter";
 import search_icon from "../assets/magnifying-glass-solid.svg"
+import { Link } from "react-router-dom";
 
 export const WelcomeBoard = () => {
   return (
@@ -11,10 +12,10 @@ export const WelcomeBoard = () => {
           <h2>Un buen lugar para ganar</h2>
         </div>
         <div className="explore">
-          <a href="/categorias/">
+          <Link className='button' to="/categorias/">
             <img src={compass_icon} alt="Explorar" />
             Explorar cajas
-          </a>
+          </Link>
           <div className="search__bar">
             <img src={search_icon} alt="Buscar cajas" /><input type="text" placeholder="Buscar cajas"/>
           </div>
