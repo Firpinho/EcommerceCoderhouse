@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { data } from "../data/items";
 import { ItemList } from "./ItemList";
 import { LoadingScreen } from "./LoadingScreen";
+
+import {getFirestore, getDocs, collection, query, where} from 'firebase/firestore'
 
 export const ItemListContainer = (props) => {
   const [items, setItems] = useState(null);
@@ -12,17 +13,14 @@ export const ItemListContainer = (props) => {
 
     setItems(null)
 
-    const promise = new Promise((resolve, reject) => {
-      setTimeout(() => resolve(data), 1000);
-    });
+    const db = getFirestore()
+    const refDocs = !category_filter ? collection(db, "items") : query(collection(db, "items"), where("category", "==", category_filter))
 
-    promise.then((response) => {
-      if (!category_filter) setItems(response);
-      else {
-        const filter = response.filter((item) => item.category === category_filter);
-        setItems(filter);
-      }
-    });
+    getDocs(refDocs).then((snapshot) => {
+      const items = snapshot.docs.map((doc) => {return {id: doc.id, ...doc.data()}});
+      setItems(items)
+    })
+
   }, [category_filter]);
 
   return (

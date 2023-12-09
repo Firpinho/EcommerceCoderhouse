@@ -2,10 +2,12 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { LoadingScreen } from "./LoadingScreen";
 
-import { data } from "../data/items";
 import { ItemDetail } from "./ItemDetail";
 import { Line } from "./Line";
 import { ItemListContainer } from "./ItemListContainer";
+
+
+import {getFirestore, getDoc, doc} from 'firebase/firestore'
 
 export const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
@@ -17,17 +19,14 @@ export const ItemDetailContainer = () => {
     setItem(null)
     window.scrollTo(0, 0);
 
-    const promise = new Promise((resolve, reject) => {
-      setTimeout(() => resolve(data), 1000);
-    });
+    const db = getFirestore()
+    const refDoc = doc(db, "items", box_id)
 
-    promise.then((response) => {
-      const filter = response.find((item) => item.id === Number(box_id));
-      if (!filter) {
-       
-      }
-      setItem(filter);
-    });
+    getDoc(refDoc).then((snapshot) => {
+      const item = snapshot.data((doc) => {return {id: doc.id, ...doc.data()}});
+      setItem(item);
+    })
+    
   }, [box_id]);
 
   return (
