@@ -28,13 +28,13 @@ export const NavBar = () => {
     <header>
       <nav>
         <div className="main_content">
-          <NavLink className="nav_brand" to='/'>
+          <NavLink className="nav_brand" to="/">
             <p>Loot?Hub</p>
           </NavLink>
           <div className="options">
             {options.map((option) => (
               <div className="item" key={option.text}>
-                <NavLink className='button' to={option.link}>
+                <NavLink className="button" to={option.link}>
                   <img src={option.icon} alt="Option icon" />
                   <p>{option.text}</p>
                 </NavLink>
@@ -43,9 +43,11 @@ export const NavBar = () => {
           </div>
         </div>
         <div className="other_options">
-          <CartWidget itemCount="3" />
+          <NavLink to={'/cart'}>
+            <CartWidget/>
+          </NavLink>
           <div className="item__1">
-            <a className='button' href="">
+            <a className="button" href="">
               <img src={crear} alt="Crear caja" />
               <p>Crear Caja</p>
             </a>

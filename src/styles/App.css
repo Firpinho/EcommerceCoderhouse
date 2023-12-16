@@ -96,6 +96,8 @@ body {
 
 .default_card {
   width: 250px;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(180deg, #353535 0%, #917113 100%);
   color: ghostwhite;
   border-color: #f2be22;
@@ -546,6 +548,104 @@ body {
   outline: none;
   filter: drop-shadow(0 0 0.35rem #f2be22);
   background-color: #26231c;
+}
+
+.cart__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cart__container .button {
+  margin: 50px;
+}
+.cart__container .cart__list {
+  width: 100%;
+}
+.cart__container .cart__list table {
+  width: 100%;
+  font-weight: bold;
+}
+.cart__container .cart__list table .button {
+  margin: 0 auto !important;
+  width: 50px !important;
+}
+.cart__container .cart__list table th {
+  color: ghostwhite;
+  font-size: 20px;
+  height: 60px;
+}
+.cart__container .cart__list table tr {
+  text-align: center;
+}
+.cart__container .cart__list table tr td {
+  color: #f2be22;
+  font-size: 25px;
+}
+.cart__container .cart__list table tr td p {
+  color: ghostwhite;
+}
+.cart__container .cart__list table tr td p span {
+  color: #f2be22;
+}
+.cart__container .cart__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+.cart__container .cart__form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.cart__container .cart__form h1 {
+  color: #f2be22;
+}
+.cart__container .cart__form input {
+  width: 250px;
+  height: 50px;
+  padding: 0 70px;
+  background: transparent;
+  border-color: #f2a81d;
+  border-radius: 50px;
+  border-width: 3px;
+  border-style: solid;
+  color: ghostwhite;
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  transition: filter 0.4s ease-in-out, width 0.4s ease-in-out;
+}
+.cart__container .cart__form input::placeholder {
+  color: ghostwhite;
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+}
+.cart__container .cart__form input:focus {
+  width: 300px;
+  outline: none;
+  filter: drop-shadow(0 0 0.35rem #f2be22);
+  background-color: #26231c;
+}
+.cart__container .empty__cart_container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 70vh;
+}
+.cart__container .empty__cart_container .empty_cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.cart__container .empty__cart_container .empty_cart h1 {
+  color: #f2be22;
 }
 
 /*

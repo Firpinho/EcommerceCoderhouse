@@ -1,0 +1,101 @@
+.cart__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .button {
+    margin: 50px;
+  }
+  .cart__list {
+    width: 100%;
+    table {
+      width: 100%;
+      font-weight: bold;
+      .button {
+        margin: 0 auto !important;
+        width: 50px !important;
+      }
+      th {
+        color: ghostwhite;
+        font-size: 20px;
+        height: 60px;
+      }
+      tr {
+        text-align: center;
+        td {
+          color: map-get($map: $main-theme, $key: titles);
+          font-size: 25px;
+          p{
+            color: ghostwhite;
+            span {
+                color: map-get($map: $main-theme, $key: titles);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cart__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+    h1 {
+      color: map-get($map: $main-theme, $key: titles);
+    }
+    input {
+      width: 250px;
+      height: 50px;
+      padding: 0 70px;
+      background: transparent;
+      border-color: map-get($map: $main-theme, $key: borders);
+      border-radius: 50px;
+      border-width: 3px;
+      border-style: solid;
+      color: ghostwhite;
+      font-weight: bold;
+      font-size: large;
+      text-align: center;
+
+      transition: filter .4s ease-in-out, width .4s ease-in-out;
+
+      &::placeholder {
+        color: ghostwhite;
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+      }
+      &:focus {
+        width: 300px;
+        outline: none;
+        filter: map-get($map: $main-theme, $key: drop-shadow);
+        background-color: map-get($map: $button, $key: button-bg);
+      }
+    }
+  }
+
+  .empty__cart_container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;    
+    height: 70vh;
+    .empty_cart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      h1 {
+        color: map-get($map: $main-theme, $key: titles);
+      }
+    }
+  }
+}

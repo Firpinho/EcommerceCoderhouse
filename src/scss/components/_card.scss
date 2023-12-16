@@ -3,6 +3,8 @@
         margin: 0;
     }
     width: 250px;
+    display: flex;
+    flex-direction: column;
     background: map-get($map: $default-card, $key: card-bg);
     color: map-get($map: $default-card, $key: card-color);
     border-color: map-get($map: $default-card, $key: img-side-border);
